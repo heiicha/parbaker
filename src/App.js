@@ -9,7 +9,7 @@ function App() {
         <img
           src={logo}
           alt="parbake mascot thing"
-          className="w-64 h-64 object-scale-down object-center"
+          className="w-auto h-64 object-scale-down object-center ml-10"
         />
       </div>
 
