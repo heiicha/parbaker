@@ -1,41 +1,38 @@
-// src/App.js
-import React from 'react';
-import './input.css'; // Import Tailwind and custom styles
+import React from "react";
+import logo from './assets/parbake.png'
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-4">
-        <h1 className="text-center text-3xl">Baobei Recipe & Timer</h1>
-      </header>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-bgcolor ">
+      {/* Illustration Section */}
+      <div className="mb-8">
+        <img
+          src={logo}
+          alt="parbake mascot thing"
+          className="w-64 h-64 object-scale-down object-center"
+        />
+      </div>
 
-      {/* Main Content */}
-      <main className="flex-grow p-8">
-        {/* Egg Timer */}
-        <div className="mb-8">
-          <h2 className="text-2xl mb-4">Egg Timer</h2>
-          {/* Placeholder for Egg Timer */}
-          <div className="bg-gray-100 p-4 rounded-lg">
-            {/* Egg Timer Form */}
-          </div>
-        </div>
+      {/* Buttons Section */}
+      <div className="flex flex-col items-center space-y-2 ">
+        <a
+          href="/egg-timer"
+          className="font-silkscreen font-bold text-3xl bg-buttoncolor text-white py-3 px-10 text-lg rounded-xl shadow-shadow text-center hover:bg-buttonhover transition-all duration-300"
+          style={{
+            boxShadow: '2px 4px 15px #8B6F00',
+          }}
+        >
+          Egg Timer
+        </a>
+        <a
+          href="/recipe-converter"
+          className="font-silkscreen font-bold text-3xl bg-buttoncolor text-white py-3 px-10 text-lg rounded-xl shadow-shadow hover:bg-buttonhover text-center transition-all duration-300"
+        >
+        Recipe Converter
+        </a>
+      </div>
 
-        {/* Recipe Converter */}
-        <div>
-          <h2 className="text-2xl mb-4">Recipe Converter</h2>
-          {/* Placeholder for Recipe Converter */}
-          <div className="bg-gray-100 p-4 rounded-lg">
-            {/* Recipe Converter Form */}
-          </div>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-4">
-        <p className="text-center">&copy; 2025 Baobei. All rights reserved.</p>
-      </footer>
-    </div>
+      </div>
   );
 }
 
